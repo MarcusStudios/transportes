@@ -1,6 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- STICKY HEADER ON SCROLL ---
     const header = document.querySelector('header');
+
+    // --- SCROLL REVEAL (IntersectionObserver) ---
+    const revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length > 0) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => revealObserver.observe(el));
+    }
+
+    // --- SCROLL TO TOP BUTTON ---
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {

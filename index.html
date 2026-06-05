@@ -17,6 +17,9 @@
     <a href="https://wa.me/559991742625?text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+os+servi%C3%A7os+de+transporte." class="floating-whatsapp" target="_blank" aria-label="Fale conosco no WhatsApp" id="whatsapp-float">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <!-- --- HEADER & NAVIGATION --- -->
     <header id="header">
@@ -44,8 +47,6 @@
 
     <!-- --- HERO SECTION --- -->
     <section class="hero" id="home">
-        <div class="hero-orb-blue"></div>
-        <div class="hero-orb-gold"></div>
         <div class="container hero-wrapper">
             <div class="hero-content">
                 <h1>Transportando sonhos com <span>segurança</span> e <span>pontualidade</span></h1>
@@ -58,19 +59,24 @@
                         <i class="fa-brands fa-instagram"></i> Siga no Instagram
                     </a>
                 </div>
+                <div class="hero-badges">
+                    <div class="hero-badge-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Carga 100% Segura</span>
+                    </div>
+                    <div class="hero-badge-item">
+                        <i class="fa-solid fa-truck-moving"></i>
+                        <span>Frota Própria</span>
+                    </div>
+                    <div class="hero-badge-item">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <span>Cobertura Regional</span>
+                    </div>
+                </div>
             </div>
             <div class="hero-image-container">
                 <div class="hero-image-wrapper">
                     <img src="img/hero_truck_br.png" alt="Caminhão Milene Transportes em rodovia brasileira ao entardecer" loading="lazy">
-                </div>
-                <div class="hero-stats-card">
-                    <div class="hero-stats-icon">
-                        <i class="fa-solid fa-circle-check"></i>
-                    </div>
-                    <div class="hero-stats-info">
-                        <h4>100%</h4>
-                        <p>Cargas Seguras</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -124,8 +130,8 @@
                 <p>Atendemos a diferentes necessidades de transporte com agilidade e eficiência.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-image">
+                <div class="service-card reveal">
+                    <div class="service-image" style="background-image: url('img/service_encomendas.png')">
                         <i class="fa-solid fa-box service-icon-bg"></i>
                         <i class="fa-solid fa-box service-icon-main"></i>
                     </div>
@@ -137,8 +143,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-image">
+                <div class="service-card reveal">
+                    <div class="service-image" style="background-image: url('img/service_residencial.png')">
                         <i class="fa-solid fa-house-chimney service-icon-bg"></i>
                         <i class="fa-solid fa-house-chimney service-icon-main"></i>
                     </div>
@@ -150,8 +156,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-image">
+                <div class="service-card reveal">
+                    <div class="service-image" style="background-image: url('img/service_comercial.png')">
                         <i class="fa-solid fa-building service-icon-bg"></i>
                         <i class="fa-solid fa-building service-icon-main"></i>
                     </div>
@@ -163,8 +169,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-image">
+                <div class="service-card reveal">
+                    <div class="service-image" style="background-image: url('img/service_frete.png')">
                         <i class="fa-solid fa-truck-ramp-box service-icon-bg"></i>
                         <i class="fa-solid fa-truck-ramp-box service-icon-main"></i>
                     </div>
@@ -206,7 +212,7 @@
             </div>
             <div class="about-visual">
                 <div class="about-img-box">
-                    <img src="img/hero_truck.png" alt="Logística e Transporte de Cargas" loading="lazy">
+                    <img src="img/about_equipe.png" alt="Rodovia brasileira com caminhão Milene Transportes" loading="lazy">
                 </div>
             </div>
         </div>
@@ -257,25 +263,40 @@
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Seu Nome *</label>
-                        <input type="text" id="name" class="form-control" placeholder="Ex: João Silva" required>
+                        <div class="input-icon-wrapper">
+                            <input type="text" id="name" class="form-control" placeholder="Ex: João Silva" required>
+                            <i class="fa-solid fa-user input-icon"></i>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="phone">Seu Celular / WhatsApp *</label>
-                        <input type="tel" id="phone" class="form-control" placeholder="Ex: (99) 99174-2625" required>
+                        <div class="input-icon-wrapper">
+                            <input type="tel" id="phone" class="form-control" placeholder="Ex: (99) 99174-2625" required>
+                            <i class="fa-solid fa-phone input-icon"></i>
+                        </div>
                     </div>
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                         <div class="form-group">
                             <label for="origin">Cidade de Origem *</label>
-                            <input type="text" id="origin" class="form-control" placeholder="Ex: São Paulo - SP" required>
+                            <div class="input-icon-wrapper">
+                                <input type="text" id="origin" class="form-control" placeholder="Ex: São Paulo - SP" required>
+                                <i class="fa-solid fa-location-dot input-icon"></i>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="destination">Cidade de Destino *</label>
-                            <input type="text" id="destination" class="form-control" placeholder="Ex: Campinas - SP" required>
+                            <div class="input-icon-wrapper">
+                                <input type="text" id="destination" class="form-control" placeholder="Ex: Campinas - SP" required>
+                                <i class="fa-solid fa-flag-checkered input-icon"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="details">Descrição da Carga / Detalhes *</label>
-                        <textarea id="details" class="form-control" placeholder="Descreva os itens a serem transportados (ex: sofá, mesa, 10 caixas, guarda-roupa...)" required></textarea>
+                        <div class="input-icon-wrapper">
+                            <textarea id="details" class="form-control" placeholder="Descreva os itens a serem transportados (ex: sofá, mesa, 10 caixas, guarda-roupa...)" required></textarea>
+                            <i class="fa-solid fa-box input-icon"></i>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
                         <i class="fa-brands fa-whatsapp"></i> Enviar Solicitação via WhatsApp
@@ -292,7 +313,7 @@
                 <div class="footer-brand">
                     <div class="footer-logo-container">
                         <a href="#home" class="logo">
-                            <img src="img/transportes.png" alt="Milene Transportes Logo" class="logo-img">
+                            <img src="img/transportes_crop.png" alt="Milene Transportes Logo" class="logo-img">
                         </a>
                     </div>
                     <p>Sua carga e encomendas entregues com segurança, pontualidade e o carinho familiar que você merece.</p>
