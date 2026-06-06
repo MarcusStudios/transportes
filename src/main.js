@@ -122,4 +122,23 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open(whatsappUrl, '_blank');
         });
     }
+
+    // --- FAQ ACCORDION ---
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const isOpen = faqItem.classList.contains('active');
+            
+            // Fecha todos os outros itens abertos para efeito acordeão
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Se o item clicado não estava aberto, abra-o
+            if (!isOpen) {
+                faqItem.classList.add('active');
+            }
+        });
+    });
 });

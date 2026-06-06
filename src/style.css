@@ -2,19 +2,19 @@
 
 /* --- CUSTOM VARIABLES --- */
 :root {
-    --primary: #3A6FA7;        /* Azul Steel — cor principal da logo */
-    --primary-light: #5A9FD4;  /* Azul Céu — highlights e gradientes claros */
-    --primary-dark: #1E4A7A;   /* Azul Marinho — gradientes escuros e footer */
-    --primary-muted: #2C5A8F;  /* Azul intermediário — textos de nav */
-    --accent: #F59E0B;         /* Âmbar Dourado — contraste premium */
-    --accent-hover: #D97706;   /* Âmbar Escuro — hover states */
-    --accent-rgb: 245, 158, 11;
-    --text-dark: #2D2D2D;      /* Cinza Grafite — texto "milene" na logo */
+    --primary: #2B5EA7;        /* Azul principal — cor institucional da logo */
+    --primary-light: #4A80C4;  /* Azul claro — highlights e gradientes */
+    --primary-dark: #0D1B2A;   /* Preto-azulado — hero, footer e gradientes escuros */
+    --primary-muted: #3A6B9F;  /* Azul intermediário — textos de nav */
+    --accent: #1A73E8;         /* Azul vibrante — destaque e CTAs */
+    --accent-hover: #1557B0;   /* Azul hover — estados interativos */
+    --accent-rgb: 26, 115, 232;
+    --text-dark: #1A1A1A;      /* Preto suave — texto principal */
     --text-light: #ffffff;
-    --text-muted: #5A6778;     /* Cinza azulado suave */
-    --bg-light: #F0F5FA;       /* Ghost Blue — backgrounds alternados */
+    --text-muted: #6B7280;     /* Cinza médio — textos secundários */
+    --bg-light: #F3F4F6;       /* Cinza claro — backgrounds alternados */
     --bg-white: #ffffff;
-    --border-color: #CBD5E1;   /* Cinza-azul neutro */
+    --border-color: #D1D5DB;   /* Cinza borda — separadores */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
@@ -33,7 +33,7 @@
 /* --- COR DE SELEÇÃO DE TEXTO --- */
 ::selection {
     background-color: var(--accent);
-    color: var(--text-dark);
+    color: #ffffff;
 }
 
 /* --- CSS RESET & BASE STYLES --- */
@@ -142,14 +142,14 @@ button, input, textarea {
 
 .btn-primary {
     background-color: var(--accent);
-    color: var(--text-dark);
+    color: #ffffff;
     font-weight: 700;
 }
 
 .btn-primary:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.35);
 }
 
 .btn-secondary {
@@ -309,7 +309,7 @@ header.scrolled .menu-toggle span {
     padding-top: 8rem;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #0F1A2C 0%, #152A47 100%);
+    background: linear-gradient(135deg, #0A0F1A 0%, #0D1B2A 100%);
     color: var(--text-light);
     position: relative;
     overflow: hidden;
@@ -400,7 +400,7 @@ header.scrolled .menu-toggle span {
 
 .hero-badge-item:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(245, 158, 11, 0.35);
+    border-color: rgba(26, 115, 232, 0.45);
     transform: translateY(-2px);
 }
 
@@ -496,7 +496,7 @@ header.scrolled .menu-toggle span {
 .why-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, rgba(58, 111, 167, 0.12), rgba(245, 158, 11, 0.08));
+    background: linear-gradient(135deg, rgba(43, 94, 167, 0.10), rgba(26, 115, 232, 0.07));
     color: var(--primary);
     border-radius: var(--radius-md);
     display: flex;
@@ -504,7 +504,7 @@ header.scrolled .menu-toggle span {
     justify-content: center;
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(58, 111, 167, 0.15);
+    border: 1px solid rgba(43, 94, 167, 0.18);
     transition: all var(--transition-normal);
 }
 
@@ -512,7 +512,7 @@ header.scrolled .menu-toggle span {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: var(--text-light);
     border-color: transparent;
-    box-shadow: 0 4px 12px rgba(58, 111, 167, 0.3);
+    box-shadow: 0 4px 12px rgba(43, 94, 167, 0.35);
 }
 
 .why-card h3 {
@@ -604,9 +604,9 @@ header.scrolled .menu-toggle span {
 
 .service-icon-main {
     font-size: 3.25rem;
-    color: var(--accent);
+    color: #ffffff;
     z-index: 2;
-    filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.5));
+    filter: drop-shadow(0 2px 12px rgba(26, 115, 232, 0.5));
     transition: transform var(--transition-normal);
 }
 
@@ -740,7 +740,7 @@ header.scrolled .menu-toggle span {
     left: -8px;
     width: 32%;
     height: 32%;
-    border: 2px solid rgba(245, 158, 11, 0.18);
+    border: 2px solid rgba(26, 115, 232, 0.18);
     border-radius: var(--radius-md);
     z-index: 0;
 }
@@ -931,8 +931,8 @@ header.scrolled .menu-toggle span {
 
 .form-control:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18);
-    background-color: #fffef7;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+    background-color: #f5f8ff;
 }
 
 textarea.form-control {
@@ -977,10 +977,10 @@ textarea.form-control {
 
 /* --- FOOTER --- */
 footer {
-    background: linear-gradient(180deg, var(--primary-dark) 0%, #122f50 100%);
+    background: linear-gradient(180deg, var(--primary-dark) 0%, #060D16 100%);
     color: var(--text-light);
     padding: 4rem 0 2rem 0;
-    border-top: 3px solid var(--accent);
+    border-top: 3px solid var(--primary);
 }
 
 .footer-grid {
@@ -1121,8 +1121,8 @@ footer {
 .scroll-top-btn:hover {
     background-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
-    color: var(--text-dark);
+    box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4);
+    color: #ffffff;
 }
 
 /* --- SCROLL REVEAL ANIMATIONS --- */
@@ -1212,7 +1212,7 @@ footer {
 
     /* Hero */
     .hero {
-        padding-top: 6rem;
+        padding-top: 10rem;
         padding-bottom: 3rem;
         min-height: auto;
     }
@@ -1353,7 +1353,7 @@ footer {
 
     /* Hero */
     .hero {
-        padding-top: 5rem;
+        padding-top: 9rem;
     }
 
     .hero-content h1 {
@@ -1467,3 +1467,203 @@ footer {
     object-fit: contain;
     object-position: center;
 }
+
+/* --- TESTIMONIALS SECTION --- */
+.testimonials {
+    background-color: var(--bg-white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.testimonial-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all var(--transition-normal);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.08;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(26, 115, 232, 0.25);
+}
+
+.testimonial-card .stars {
+    color: #FBBF24; /* Amarelo premium para estrelas */
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.testimonial-card .comment {
+    color: var(--text-dark);
+    font-style: italic;
+    font-size: 1.025rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-card .client-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-card .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: #ffffff;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(43, 94, 167, 0.2);
+}
+
+.testimonial-card .client-info h4 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.testimonial-card .client-info span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* --- FAQ SECTION --- */
+.faq {
+    background-color: var(--bg-light);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+    border-color: rgba(26, 115, 232, 0.3);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary);
+    transition: all var(--transition-fast);
+}
+
+.faq-question:hover {
+    color: var(--accent);
+}
+
+.faq-question i {
+    font-size: 0.95rem;
+    color: var(--primary-muted);
+    transition: transform var(--transition-normal);
+}
+
+.faq-content-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--transition-normal);
+}
+
+.faq-answer {
+    overflow: hidden;
+}
+
+.faq-answer p {
+    padding: 0 2rem 1.5rem 2rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* FAQ Active State */
+.faq-item.active {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-item.active .faq-question {
+    color: var(--accent);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: var(--accent);
+}
+
+.faq-item.active .faq-content-wrapper {
+    grid-template-rows: 1fr;
+}
+
+/* Responsive adjustment for Testimonials */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .faq-question {
+        padding: 1.25rem 1.5rem;
+        font-size: 1.05rem;
+    }
+    
+    .faq-answer p {
+        padding: 0 1.5rem 1.25rem 1.5rem;
+    }
+}
+
