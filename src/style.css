@@ -219,6 +219,7 @@ header.scrolled {
 
 header.scrolled .logo-img {
     height: 45px;
+    
 }
 
 header.scrolled .nav-links a {
@@ -1524,6 +1525,8 @@ footer {
     display: inline-block;
     margin-bottom: 1.5rem;
     box-shadow: var(--shadow-sm);
+    margin-right: 20px;
+    
 }
 
 .footer-logo-container .logo-img {
@@ -1532,6 +1535,7 @@ footer {
     display: block;
     object-fit: contain;
     object-position: center;
+    margin-left: 20px;
 }
 
 /* --- TESTIMONIALS SECTION --- */
